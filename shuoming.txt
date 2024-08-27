@@ -1,0 +1,42 @@
+1.  git init     初始化本地库
+2.  查看状态    git status
+3. vim hello.txt    yy复制  p粘贴   esc退出插入模式    shift+ ';'   出现冒号    wq  回车     生成这个文件    删除行dd
+4. 本地文件添加到暂存区    git add hello.txt
+5. 删除暂存区的文件   git rm --cached hello.txt
+6.暂存区文件提交本地库    形成历史版本    git commit -m "日志信息"  hello.txt
+7.查看版本信息  git reflog    或者    看版本详细信息   git log
+
+//分支
+8.创建分支 git branch 分支名
+9.查看分支 git branch -v
+10.切换分支  git.checkout 分支名
+11.把指定分支合并到当前分支上  git merge 指定分支名       如果有冲突     解决完冲突后，   
+当前分支需要  add  和  commit ，  commit 后面不要带文件名     指定分支内容不变，变的只是当前分支
+
+https://github.com/      125653231@qq.com    xie_zhi740abc      welen86971
+右上角  + 号  选  New repository   创建远程库
+
+https://github.com/welen86971/git-demo.git
+git@github.com:welen86971/git-demo.git
+
+团队内协作   一个远程仓库  
+push（推送到远程库）    clone（从0到有）    pull(从远程库拉取，修改本地之前的)
+
+跨团队协议  二个远程仓库
+把远程仓库A的代码fork 到自己的远程库B，   先clone到自己本地仓库， 修改完后push到B，
+
+12.本地库查看别名                   git remote -v
+13.本地库创建别名                 git remote add “别名名称”远程库地址
+14.  本地库   推送代码到远程库
+git push 别名 分支名
+
+15. 拉取远程库最新代码到本地库
+git pull 别名 分支名
+
+16. git clone 远程库地址
+
+ssh
+ssh-keygen -t rsa -C 125653231@qq.com
+
+给远程库A发起pull request 请求，  A这边审核完后    再merge合并到自己的远程库A。   A中的就可以pull或者clone下来得到最新的了
+
